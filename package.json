@@ -1,0 +1,23 @@
+{
+  "name": "arbitraryplay",
+  "version": "1.0.0",
+  "description": "The place for audience and players interact music.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "node",
+    "p5",
+    "websockets"
+  ],
+  "author": "Zong-Hsuan Yang",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^4.3.1",
+    "socket.io-client": "^4.3.2"
+  },
+  "devDependencies": {}
+}
