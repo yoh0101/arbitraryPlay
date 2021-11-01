@@ -1,5 +1,5 @@
 
-var socket = io.connect("http://10.106.18.142:3000");
+var socket = io.connect("https://yoh0101.github.io/arbitraryPlay/");
 
 let gui;
 let a, b, c, cf1;
