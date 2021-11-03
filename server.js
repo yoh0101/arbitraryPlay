@@ -4,9 +4,9 @@ const express = require("express");
 const app = express();
 // import http modules and pass variable app
 const http = require("http").Server(app);
-
+const PORT = process.env.PORT || 5500;
 // visiting directory
-app.use(express.static(__dirname + "/public/"));
+app.use(express.static(__dirname + "public"));
 
 // import socket.io module and set the socket server to variable io
 const io = require("socket.io")(http);
@@ -15,8 +15,8 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
 });
 */
-http.listen(80, () => {
-    console.log("My socket server is running!");
+http.listen(PORT, () => {
+    console.log(`listening on ${PORT}`);
 });
 
 // connection event
