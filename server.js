@@ -4,7 +4,7 @@ const express = require("express");
 const app = express();
 // import http modules and pass variable app
 const http = require("http").Server(app);
-const PORT = process.env.PORT || 5500;
+const PORT = process.env.PORT || 3000;
 // visiting directory
 app.use(express.static(__dirname + "public"));
 
