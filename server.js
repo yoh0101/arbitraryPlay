@@ -6,7 +6,7 @@ const app = express();
 const http = require("http").Server(app);
 const PORT = process.env.PORT || 3000;
 // visiting directory
-app.use(express.static(__dirname + "public"));
+app.use(express.static(__dirname + "/public/"));
 
 // import socket.io module and set the socket server to variable io
 const io = require("socket.io")(http);
