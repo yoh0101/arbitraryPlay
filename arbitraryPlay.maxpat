@@ -40,18 +40,64 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"bgmode" : 0,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
+					"extract" : 1,
+					"id" : "obj-24",
+					"lockeddragscroll" : 0,
+					"lockedsize" : 0,
+					"maxclass" : "bpatcher",
+					"name" : "bp.Big Spectral.maxpat",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"offset" : [ 0.0, 0.0 ],
+					"outlettype" : [ "signal" ],
+					"patching_rect" : [ 544.0, 984.0, 435.0, 214.0 ],
+					"varname" : "bp.Big Spectral",
+					"viewvisibility" : 1
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-27",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 551.0, 130.0, 29.5, 22.0 ],
+					"text" : "\" \""
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"autoout" : 1,
+					"bgcolor" : [ 0.094118, 0.113725, 0.137255, 1.0 ],
+					"curvecolor" : [ 1.0, 0.603922, 0.0, 1.0 ],
 					"fontface" : 0,
+					"fontname" : "Arial",
+					"fontsize" : 8.0,
+					"hcurvecolor" : [ 1.0, 0.603922, 0.0, 1.0 ],
 					"id" : "obj-20",
 					"linmarkers" : [ 0.0, 11025.0, 16537.5 ],
 					"logmarkers" : [ 0.0, 100.0, 1000.0, 10000.0 ],
+					"markercolor" : [ 0.301961, 0.337255, 0.403922, 1.0 ],
 					"maxclass" : "filtergraph~",
-					"nfilters" : 1,
+					"nfilters" : 3,
+					"numdisplay" : 0,
 					"numinlets" : 8,
 					"numoutlets" : 7,
 					"outlettype" : [ "list", "float", "float", "float", "float", "list", "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 71.0, 817.0, 256.0, 128.0 ],
-					"setfilter" : [ 0, 5, 1, 0, 0, 623.0, 0.961105227470398, 2.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ]
+					"patching_rect" : [ 71.0, 817.0, 229.0, 148.0 ],
+					"prototypename" : "M4L.black",
+					"range" : [ 0.041666999459267, 24.0 ],
+					"setfilter" : [ 2, 7, 1, 0, 0, 10000.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1, 5, 1, 0, 0, 32.0, 0.936960756778717, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0, 3, 1, 1, 0, 895.0, 3.232607841491699, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 ],
+					"textcolor" : [ 0.666667, 0.698039, 0.717647, 1.0 ]
 				}
 
 			}
@@ -120,7 +166,7 @@
 					"maxclass" : "ezdac~",
 					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 447.0, 999.0, 44.0, 44.0 ],
+					"patching_rect" : [ 462.0, 1104.0, 44.0, 44.0 ],
 					"prototypename" : "helpfile"
 				}
 
@@ -409,9 +455,9 @@
 							"origname" : "C74:/packages/Max for Live/patchers/Max Instrument/Big Ben Bell/Big Ben Bell.amxd",
 							"valuedictionary" : 							{
 								"parameter_values" : 								{
-									"attack" : 10.0,
+									"attack" : 24.999999999999968,
 									"decay" : 64.0,
-									"harmonic" : 0.0,
+									"harmonic" : 4.0,
 									"level" : 0.0,
 									"polyphony" : 8.0,
 									"stereo" : 64.0
@@ -437,9 +483,9 @@
 										"origname" : "C74:/packages/Max for Live/patchers/Max Instrument/Big Ben Bell/Big Ben Bell.amxd",
 										"valuedictionary" : 										{
 											"parameter_values" : 											{
-												"attack" : 10.0,
+												"attack" : 24.999999999999968,
 												"decay" : 64.0,
-												"harmonic" : 0.0,
+												"harmonic" : 4.0,
 												"level" : 0.0,
 												"polyphony" : 8.0,
 												"stereo" : 64.0
@@ -454,7 +500,7 @@
 										"filename" : "Big Ben Bell.amxd.maxsnap",
 										"filepath" : "~/Documents/Max 7/Snapshots",
 										"filepos" : -1,
-										"snapshotfileid" : "215d75210fcd9a63c9509912ac3b07c5"
+										"snapshotfileid" : "1a1d174cefa1e9da17057f3f776cb5de"
 									}
 
 								}
@@ -488,7 +534,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 943.0, 1100.0, 50.0, 22.0 ]
+					"patching_rect" : [ 943.0, 1100.0, 50.0, 22.0 ],
+					"text" : "-1. -1."
 				}
 
 			}
@@ -605,7 +652,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 276.0, 522.400007426738739, 34.0, 20.0 ],
+					"patching_rect" : [ 268.0, 540.0, 34.0, 20.0 ],
 					"text" : "pitch"
 				}
 
@@ -688,7 +735,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 103.200001537799835, 486.000007212162018, 50.0, 22.0 ],
-					"text" : "3"
+					"text" : "1"
 				}
 
 			}
@@ -794,7 +841,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 256.399999797344208, 506.400007426738739, 50.0, 22.0 ]
+					"patching_rect" : [ 256.399999797344208, 513.400007426738739, 50.0, 22.0 ]
 				}
 
 			}
@@ -819,7 +866,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 268.0, 434.5, 50.0, 35.0 ],
-					"text" : "76.925714"
+					"text" : "895.428571"
 				}
 
 			}
@@ -831,7 +878,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 206.0, 457.70000034570694, 50.0, 22.0 ],
-					"text" : "3"
+					"text" : "1"
 				}
 
 			}
@@ -951,8 +998,6 @@
 					"saved_object_attributes" : 					{
 						"autostart" : 1,
 						"defer" : 0,
-						"node_bin_path" : "",
-						"npm_bin_path" : "",
 						"watch" : 0
 					}
 ,
@@ -1070,6 +1115,13 @@
 					"destination" : [ "obj-35", 0 ],
 					"order" : 0,
 					"source" : [ "obj-25", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-8", 0 ],
+					"source" : [ "obj-27", 0 ]
 				}
 
 			}
@@ -1233,7 +1285,6 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-69", 2 ],
-					"midpoints" : [ 444.5, 701.5, 675.5, 701.5 ],
 					"source" : [ "obj-68", 0 ]
 				}
 
@@ -1241,6 +1292,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-15", 0 ],
+					"order" : 0,
 					"source" : [ "obj-69", 1 ]
 				}
 
@@ -1248,6 +1300,23 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-15", 0 ],
+					"order" : 0,
+					"source" : [ "obj-69", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-24", 0 ],
+					"order" : 1,
+					"source" : [ "obj-69", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-24", 0 ],
+					"order" : 1,
 					"source" : [ "obj-69", 0 ]
 				}
 
@@ -1275,6 +1344,15 @@
 			}
  ],
 		"parameters" : 		{
+			"obj-24::obj-12" : [ "freq_scale", "LinLog", 0 ],
+			"obj-24::obj-26" : [ "amp_scale", "LinLog", 0 ],
+			"obj-24::obj-30" : [ "freq_domain_low", "freq_domain_low", 0 ],
+			"obj-24::obj-31" : [ "domain_low_midi", "domain_low_midi", 0 ],
+			"obj-24::obj-36" : [ "domain_high_midi", "domain_high_midi", 0 ],
+			"obj-24::obj-37" : [ "freq_domain_high", "freq_domain_high", 0 ],
+			"obj-24::obj-42::obj-2" : [ "pastebang", "pastebang", 0 ],
+			"obj-24::obj-7" : [ "display_mode", "display", 0 ],
+			"obj-24::obj-9" : [ "PollingInterval", "PollingInterval", 0 ],
 			"obj-69" : [ "amxd~[1]", "amxd~[1]", 0 ],
 			"parameterbanks" : 			{
 
@@ -1336,6 +1414,18 @@
 				"name" : "Big Ben Bell.amxd",
 				"bootpath" : "C74:/packages/Max for Live/patchers/Max Instrument/Big Ben Bell",
 				"type" : "amxd",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "bp.Big Spectral.maxpat",
+				"bootpath" : "C74:/packages/BEAP/clippings/BEAP/Scope",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "pastebang.maxpat",
+				"bootpath" : "C74:/packages/BEAP/misc",
+				"type" : "JSON",
 				"implicit" : 1
 			}
  ],
