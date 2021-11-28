@@ -12,7 +12,7 @@ let msg1;
 let value = 0;
 let permissionGranted = false;
 let motion = false, ios = false;
-
+let say = 1;
 // this class describes the properties of a single particle.
 class Particle {
     // setting the co-ordinates, radius and the
@@ -143,19 +143,17 @@ function newDrawing(data) {
 }
 
 function abutton() {
+    
     console.log("A" + " is pressed.");
-    let say = 1;
-    socket.emit("talk", say);
+    socket.emit("A", say);
 }
 function bbutton() {
     console.log("B" + " is pressed.");
-    let say = 2;
-    socket.emit("talk", say);
+    socket.emit("B", say);
 }
 function cbutton() {
     console.log("C" + " is pressed.");
-    let say = 3;
-    socket.emit("talk", say);
+    socket.emit("C", say);
 }
 
 function draw(){

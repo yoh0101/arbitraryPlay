@@ -88,9 +88,17 @@ io.on("connection", socket => {
         socket.emit("message1", msg);
     });
 
-    socket.on("talk", (msg) => {
-        socket.broadcast.emit("talk", msg);
+    //test
+    socket.on("A", (msg) => {
+        socket.broadcast.emit("A", msg);
     });
+    socket.on("B", (msg) => {
+        socket.broadcast.emit("B", msg);
+    });
+    socket.on("C", (msg) => {
+        socket.broadcast.emit("C", msg);
+    });
+
 
     socket.on("cf1", (value) => {
         socket.broadcast.emit("cf1", value);
