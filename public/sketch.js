@@ -13,40 +13,23 @@ let value = 0;
 let permissionGranted = false;
 let motion = false, ios = false;
 
-// if (typeof( DeviceMotionEvent.requestPermission ) === "function" ) {
-//     document.body.addEventListener("click", function() {
-//         DeviceMotionEvent.requestPermission()
-//         .then( function() {
-//         // (optional) Do something after API prompt dismissed.
-
-//         motion = true;
-//         ios = true;
-//         })
-//         .catch(function(error) {
-//             console.warn("DeviceMotionEvent not enabale, error");
-//         });
-//     // (optional) Do something before API request prompt.
-//     });
-// } else {
-//     //alert( "DeviceMotionEvent is not defined" );
-// }
 
 function setup(){
     createCanvas(windowWidth, windowHeight);
 
     
-    // gui = createGui(); // call the gui objects
-    // gui.loadStyle("TerminalMagenta");
-    // gui.setTrackWidth(0);
-    // gui.setRounding(0);
+    gui = createGui(); // call the gui objects
+    gui.loadStyle("TerminalMagenta");
+    gui.setTrackWidth(0);
+    gui.setRounding(0);
 
-    // a = createButton("A", 50, 50, 50, 50);
-    // b = createButton("B", 50, 110, 50, 50);
-    // c = createButton("C", 50, 170, 50, 50);
-    // cf1 = createCrossfaderV("CrossfaderV 1", 225, 25, 75, 350, 100, 3000); // last two args are min and max
-    // cf2 = createCrossfader("Crossfader 2", 25, 200, 200, 75, 0, 127);
-    
-    // home = createButton("回到首頁", windowWidth/2-50, windowHeight-30, 100, 30);
+    a = createButton("A", 50, 50, 50, 50);
+    b = createButton("B", 50, 110, 50, 50);
+    c = createButton("C", 50, 170, 50, 50);
+    cf1 = createCrossfaderV("CrossfaderV 1", 225, 25, 75, 350, 100, 3000); // last two args are min and max
+    cf2 = createCrossfader("Crossfader 2", 25, 200, 200, 75, 0, 127);
+    accelPermision = createButton("g", 50, 300, 50, 50);
+    home = createButton("回到首頁", windowWidth/2-50, windowHeight-30, 100, 30);
     
     
 
@@ -85,8 +68,8 @@ function draw(){
     background(200);
     
     
-    // drawGui(); // need to be in draw(), and after the background()
-    // backToHome() //if home is pressed then back to home page
+    drawGui(); // need to be in draw(), and after the background()
+    backToHome() //if home is pressed then back to home page
     
     sayhi();
 
@@ -95,7 +78,9 @@ function draw(){
         socket.emit("room", roomName, "ctf", cf1.val); 
     }
     
-    
+    if(accelPermision.isPressed) {
+        getAccel();
+    }
     
     //test
     if(cf2.isChanged) {
