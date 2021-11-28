@@ -7,12 +7,12 @@ const params = new URLSearchParams(window.location.search);
 const roomName = params.get("room");
 
 let gui;
-let home, a, b, c, cf1, accelPermision, cf2;
+//let home, a, b, c, cf1, accelPermision, cf2;
 let msg1;
 let value = 0;
 let permissionGranted = false;
 let motion = false, ios = false;
-
+let flock;
 
 function setup(){
     createCanvas(windowWidth, windowHeight);
@@ -98,7 +98,7 @@ function draw(){
     // drawGui(); // need to be in draw(), and after the background()
     // backToHome() //if home is pressed then back to home page
     
-    sayhi();
+    //sayhi();
 
     // if(cf1.isChanged) {
     //     print(cf1.label + " = " + cf1.val);
