@@ -9,9 +9,19 @@ maxApi.addHandler("connect", (url) => {
     socket.on("talk", (msg) => {
         maxApi.outlet("talk", msg);
     });
+    
+    // when recieve "room" event, get room name and control value 
+    socket.on("room", (roomName, control, value) => {
+        maxApi.outlet("room", roomName, control, value);
+    });
 
-    socket.on("cf1", (value) => {
-        maxApi.outlet("cf1", value);
+    
+
+
+
+    // test
+    socket.on("test", msg => {
+        maxApi.outlet(msg);
     });
     
 });
@@ -20,6 +30,6 @@ maxApi.addHandler("disconnect", () => {
     socket.close();
 });
 
-maxApi.addHandler("message", (msg) => {
-    socket.emit("message", msg);
+maxApi.addHandler("message1", (msg) => {
+    socket.emit("message1", msg);
 });

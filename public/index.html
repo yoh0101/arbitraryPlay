@@ -4,27 +4,44 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>Getting Started with p5.touchgui</title>
+        <title>Welcome to arbitraryPlay!</title>
 
         <link rel="stylesheet" type="text/css" href="style.css">
-
-        <script src="libraries/p5.min.js"></script>
-    
-        <script src="libraries/p5.clickable.js"></script>
-        <script src="libraries/p5.createloop.js"></script>
-        <script src="libraries/p5.easycam.min.js"></script>
-        <script src="libraries/p5.func.min.js"></script>
-        <script src="libraries/p5.scribble.js"></script>
-        <script src="libraries/p5.touchgui.js"></script>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="/socket.io/socket.io.js"></script>
         
     </head>
 
     <body>
-        <!-- <a href="motion.html">Motion</a> -->
-        
-        <script src="sketch.js"></script>
+        <div class="join-container">
+			<header class="join-header">
+				<h1><i class="fas fa-smile"></i>arbitraryPlay</h1>
+			</header>
+			<main class="join-main">
+				<form action="play.html">
+					<div class="form-control">
+						<label for="username">你的名稱</label>
+						<input
+							type="text"
+							name="username"
+							id="username"
+							placeholder="請輸入名字..."
+							required
+						/>
+					</div>
+					<div class="form-control">
+						<label for="room">請選擇加入的群組</label>
+						<select name="room" id="room">
+							<option value="percusion">打擊樂</option>
+							<option value="piano">鋼琴</option>
+							<option value="AG">木吉他</option>
+							<option value="EG">電吉他</option>
+							<option value="string">提琴</option>
+							<option value="synth">合成器</option>
+						</select>
+					</div>
+					<button type="submit" class="btn">Join Chat</button>
+				</form>
+			</main>
+		</div>
 
       
         
