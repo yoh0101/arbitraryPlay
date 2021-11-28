@@ -7,7 +7,7 @@ const params = new URLSearchParams(window.location.search);
 const roomName = params.get("room");
 
 let gui;
-//let home, a, b, c, cf1, accelPermision, cf2;
+let home, a, b, c, cf1, accelPermision, cf2;
 let msg1;
 let value = 0;
 let permissionGranted = false;
@@ -101,6 +101,12 @@ function setup(){
     //     ios = false;
     //   }
 
+    a = createButton("A");
+    a.size(50, 50);
+    a.position(50, 50);
+    a.touchStarted(abutton);
+        
+        
     
 
     // when join the room send the room name to server
@@ -128,7 +134,11 @@ function newDrawing(data) {
     ellipse(data.X, data.Y, 36, 36);
 }
 
-
+function abutton() {
+    console.log("A" + " is pressed.");
+    let say = 1;
+    socket.emit("talk", say);
+}
 
 
 
@@ -144,7 +154,7 @@ function draw(){
     // backToHome() //if home is pressed then back to home page
     
     //sayhi();
-
+    
     // if(cf1.isChanged) {
     //     print(cf1.label + " = " + cf1.val);
     //     socket.emit("room", roomName, "ctf", cf1.val); 
@@ -207,7 +217,7 @@ function mouseDragged() {
 
 function sayhi() {
     
-    if(a.isPressed) {
+    if(a.mousePressed) {
         print(a.label + " is pressed.");
     // sent the name talk value "hi" to server 
         let say = 1;
