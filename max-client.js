@@ -26,10 +26,10 @@ maxApi.addHandler("connect", (url) => {
     
 
     socket.on("device", msg => {
-        socket.broadcast.outlet("device", msg);
+        maxApi.outlet("device", msg);
     });
     socket.on("motion", msg => {
-        socket.broadcast.outlet("motion", msg);
+        maxApi.outlet("motion", msg);
     });
     
     // test
