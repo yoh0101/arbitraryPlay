@@ -144,17 +144,17 @@ function newDrawing(data) {
 
 function abutton() {
     console.log("A" + " is pressed.");
-    let say = 0;
+    let say = 1;
     socket.emit("talk", say);
 }
 function bbutton() {
     console.log("B" + " is pressed.");
-    let say = 1;
+    let say = 2;
     socket.emit("talk", say);
 }
 function cbutton() {
     console.log("C" + " is pressed.");
-    let say = 2;
+    let say = 3;
     socket.emit("talk", say);
 }
 
