@@ -102,11 +102,19 @@ function setup(){
     //   }
 
     a = createButton("A");
-    a.size(50, 50);
+    a.size(100, 100);
     a.position(50, 50);
     a.touchStarted(abutton);
         
-        
+    b = createButton("B");
+    b.size(100, 100);
+    b.position(50, 200);
+    b.touchStarted(bbutton);
+    
+    c = createButton("C");
+    c.size(100, 100);
+    c.position(50, 350);
+    c.touchStarted(cbutton); 
     
 
     // when join the room send the room name to server
@@ -136,11 +144,19 @@ function newDrawing(data) {
 
 function abutton() {
     console.log("A" + " is pressed.");
+    let say = 0;
+    socket.emit("talk", say);
+}
+function bbutton() {
+    console.log("B" + " is pressed.");
     let say = 1;
     socket.emit("talk", say);
 }
-
-
+function cbutton() {
+    console.log("C" + " is pressed.");
+    let say = 2;
+    socket.emit("talk", say);
+}
 
 function draw(){
     background("#0f0f0f");
