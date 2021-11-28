@@ -25,8 +25,13 @@ maxApi.addHandler("connect", (url) => {
 
     
 
-
-
+    socket.on("device", msg => {
+        socket.broadcast.emit("device", msg);
+    });
+    socket.on("motion", msg => {
+        socket.broadcast.emit("motion", msg);
+    });
+    
     // test
     socket.on("test", msg => {
         maxApi.outlet(msg);
