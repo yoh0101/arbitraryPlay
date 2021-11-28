@@ -218,10 +218,10 @@ function draw(){
     text("click to start on iOS", 10, 80);
     text("on a mobile: twist, and tilt your device", 10, 120);
     text("device - x: " + round(rotationX) + ", y: " + round(rotationY) + ", z: " + round(rotationZ), 10, 160);
-    socket.emit("device", {roomName: roomName, rX: round(rotationX), rY: round(rotationY), rZ: round(rotationZ)});
+    socket.emit("device", {roomName: roomName, device: [round(rotationX), round(rotationY), round(rotationZ)]});
 
     text("circle - x: " + xMotion + ", y: " + yMotion + ", radius: " + zMotion, 10, 200);
-    socket.emit("motion", {roomName: roomName, X: xMotion, rY: yMotion, rZ: zMotion});
+    socket.emit("motion", {roomName: roomName, motion: [xMotion, yMotion, zMotion]});
 }
 
 function mouseDragged() {
