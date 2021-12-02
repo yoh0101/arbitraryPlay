@@ -1,3 +1,4 @@
+const { text } = require("express");
 
 
 const socket = io.connect(); // connect to the address
@@ -233,6 +234,8 @@ function draw(){
 
     text("circle - x: " + xMotion + ", y: " + yMotion + ", radius: " + zMotion, 10, 200);
     socket.emit("motion", {roomName: roomName, motion: [xMotion, yMotion, zMotion]});
+
+    text("acceleration - x:" + round(accelerationX) + ", y:" + round(accelerationY) + ", z:" + round(rotationZ), 10, 240);
 }
 
 function mouseDragged() {
