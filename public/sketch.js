@@ -75,8 +75,11 @@ function setup(){
     // cf1 = createCrossfaderV("CrossfaderV 1", 225, 25, 75, 350, 100, 3000); // last two args are min and max
     // cf2 = createCrossfader("Crossfader 2", 25, 200, 200, 75, 0, 127);
     
-    // home = createButton("回到首頁", windowWidth/2-50, windowHeight-30, 100, 30);
-    
+    home = createButton("回到首頁");
+    home.size(100, 30);
+    home.position(windowWidth/2-50, windowHeight-30);
+    home.touchStarted(backToHome);
+
     if (typeof DeviceMotionEvent.requestPermission === 'function') {
         document.body.addEventListener('click', function() {
           DeviceMotionEvent.requestPermission()
