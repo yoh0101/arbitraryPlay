@@ -81,29 +81,29 @@ function setup(){
     
     // home = createButton("回到首頁", windowWidth/2-50, windowHeight-30, 100, 30);
     
-    // if (typeof DeviceMotionEvent.requestPermission === 'function') {
-    //     document.body.addEventListener('click', function() {
-    //       DeviceMotionEvent.requestPermission()
-    //         .then(function() {
-    //           console.log('DeviceMotionEvent enabled');
+    if (typeof DeviceMotionEvent.requestPermission === 'function') {
+        document.body.addEventListener('click', function() {
+          DeviceMotionEvent.requestPermission()
+            .then(function() {
+              console.log('DeviceMotionEvent enabled');
       
-    //           motion = true;
-    //           ios = true;
-    //         })
-    //         .catch(function(error) {
-    //           console.warn('DeviceMotionEvent not enabled', error);
-    //         });
-    //     });
-    //   } else {
-    //     // we are not on ios13 and above
-    //     // todo
-    //     // add detection for hardware for other devices
-    //     // if(got the hardware) {
-    //     // motion = true;
-    //     // }
-    //     motion = false;
-    //     ios = false;
-    //   }
+              motion = true;
+              ios = true;
+            })
+            .catch(function(error) {
+              console.warn('DeviceMotionEvent not enabled', error);
+            });
+        });
+      } else {
+        // we are not on ios13 and above
+        // todo
+        // add detection for hardware for other devices
+        // if(got the hardware) {
+        // motion = true;
+        // }
+        motion = false;
+        ios = false;
+      }
 
     a = createButton("A");
     a.size(100, 100);
