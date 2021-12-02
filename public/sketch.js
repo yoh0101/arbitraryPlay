@@ -273,9 +273,7 @@ function sayhi() {
 }
 
 function backToHome() {
-    if(home.isPressed) {
-        window.location = 'index.html';
-    } 
+    window.location = 'index.html'; 
 }
 
 // prevent scrolling on mobile
