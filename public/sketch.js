@@ -66,8 +66,6 @@ function setup(){
         particles.push(new Particle());
     }
 
-    fill(value);
-    rect(25, 25, 50, 50);
     
     // gui = createGui(); // call the gui objects
     // gui.loadStyle("TerminalMagenta");
@@ -161,12 +159,6 @@ function cbutton() {
     socket.emit("C", say);
 }
 
-function deviceShaken() {
-    value = value + 5;
-    if (value > 255) {
-      value = 0;
-    }
-  }
 
 function draw(){
     background("#0f0f0f");
