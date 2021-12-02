@@ -13,6 +13,7 @@ let value = 0;
 let permissionGranted = false;
 let motion = false, ios = false;
 let say = 1;
+
 // this class describes the properties of a single particle.
 class Particle {
     // setting the co-ordinates, radius and the
@@ -63,6 +64,9 @@ function setup(){
     for(let i = 0;i<width/10;i++){
         particles.push(new Particle());
     }
+
+    fill(value);
+    rect(25, 25, 50, 50);
     
     // gui = createGui(); // call the gui objects
     // gui.loadStyle("TerminalMagenta");
@@ -156,6 +160,13 @@ function cbutton() {
     socket.emit("C", say);
 }
 
+function deviceShaken() {
+    value = value + 5;
+    if (value > 255) {
+      value = 0;
+    }
+  }
+
 function draw(){
     background("#0f0f0f");
     for(let i = 0;i<particles.length;i++) {
@@ -215,8 +226,8 @@ function draw(){
     textFont("'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace");
 
     fill(255, 100, 50);
-    text("click to start on iOS", 10, 80);
-    text("on a mobile: twist, and tilt your device", 10, 120);
+    //text("click to start on iOS", 10, 80);
+    //text("on a mobile: twist, and tilt your device", 10, 120);
     text("device - x: " + round(rotationX) + ", y: " + round(rotationY) + ", z: " + round(rotationZ), 10, 160);
     socket.emit("device", {roomName: roomName, device: [round(rotationX), round(rotationY), round(rotationZ)]});
 
