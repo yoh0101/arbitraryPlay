@@ -178,11 +178,11 @@ function draw(){
 
     
     // recieve message
-    socket.on("message1", (msg) => {
+    socket.on("percusion", (msg) => {
         msg1 = msg;
     });
     textSize(24);
-    fill(0);
+    fill(255, 255, 255);
     text(msg1, 50, 300);
 
     // we can use rotationZ, rotationX and rotationY

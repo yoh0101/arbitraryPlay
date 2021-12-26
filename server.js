@@ -86,9 +86,9 @@ io.on("connection", socket => {
     });
 
 
-
-    socket.on("message1", (msg) => {
-        socket.emit("message1", msg);
+    // from Max
+    socket.on("percusionPlay", (msg) => {
+        socket.emit("percusion", msg);
     });
 
     //test
