@@ -178,7 +178,7 @@ function draw(){
 
     
     // recieve message
-    socket.on("percusion", (msg) => {
+    socket.on("percusionPlay", (msg) => {
         console.log(msg);
         msg1 = msg;
     });
