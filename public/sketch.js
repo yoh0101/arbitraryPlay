@@ -65,7 +65,7 @@ function setup(){
     for(let i = 0;i<width/10;i++){
         particles.push(new Particle());
     }
-
+/*
     colorMode(HSB, 360, 100, 100, 100);
 
     noFill();
@@ -78,7 +78,7 @@ function setup(){
 
     imageMode(CENTER);
     pixelDensity(1);//High reso, slows frame rate
-
+*/
     home = createButton("回到首頁");
     home.size(100, 30);
     home.position(windowWidth/2-50, windowHeight-30);
@@ -174,7 +174,7 @@ function draw(){
         particles[i].joinParticles(particles.slice(i));
     }
     
-    textNeon("arbitraryPlay", width/2, height/2, color(332, 58, 91,100));
+    //textNeon("arbitraryPlay", width/2, height/2, color(332, 58, 91,100));
 
     
     // recieve message
