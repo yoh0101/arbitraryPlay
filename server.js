@@ -74,7 +74,7 @@ io.on("connection", socket => {
     socket.on("motion", msg => {
         socket.broadcast.emit("motion", msg);
     });
-    socket.on("motion", msg => {
+    socket.on("acceleration", msg => {
         socket.broadcast.emit("acceleration", msg);
     });
     
