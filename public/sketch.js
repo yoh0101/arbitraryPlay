@@ -147,8 +147,44 @@ function setup(){
     // receive the "mosue" event and call newDrawing function
     socket.on("mouse", newDrawing);
 
-    // recieve message
+    /* from Max */
+    // choose percussion
     socket.on("percussionPlay", (msg) => {
+        if(msg == "It's your turn!") {
+            song.play();
+        }
+        msg1 = msg;
+    });
+
+    socket.on("pianoPlay", (msg) => {
+        if(msg == "It's your turn!") {
+            song.play();
+        }
+        msg1 = msg;
+    });
+
+    socket.on("agPlay", (msg) => {
+        if(msg == "It's your turn!") {
+            song.play();
+        }
+        msg1 = msg;
+    });
+
+    socket.on("egPlay", (msg) => {
+        if(msg == "It's your turn!") {
+            song.play();
+        }
+        msg1 = msg;
+    });
+
+    socket.on("stringPlay", (msg) => {
+        if(msg == "It's your turn!") {
+            song.play();
+        }
+        msg1 = msg;
+    });
+
+    socket.on("synthPlay", (msg) => {
         if(msg == "It's your turn!") {
             song.play();
         }
@@ -234,6 +270,18 @@ function draw(){
     socket.emit("acceleration", {roomName: roomName, acceleration: [round(accelerationX), round(accelerationY), round(accelerationZ)]});
 }
 
+function mousePressed() {
+
+    //create a sprite at the mouse position and store it in a temporary variable
+    var s = createSprite(mouseX, mouseY, 30, 30);
+    //if no image or animation is associated it will be a rectancle of the specified size
+    //and a random color
+  
+    //now you can use the variable to set properties
+    //e.g. a random velocity on the x and y coordinates
+    s.velocity.x = random(-5, 5);
+    s.velocity.y = random(-5, 5);
+  }
 
 
 function mouseDragged() {

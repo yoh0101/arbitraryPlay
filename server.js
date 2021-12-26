@@ -86,11 +86,33 @@ io.on("connection", socket => {
     });
 
 
-    // from Max
+    /* from Max */
+    // percussion
     socket.on("percussionPlay", msg => {
         socket.broadcast.emit("percussionPlay", msg);
     });
 
+    socket.on("pianoPlay", msg => {
+        socket.broadcast.emit("pianoPlay", msg);
+    });
+
+    socket.on("agPlay", msg => {
+        socket.broadcast.emit("agPlay", msg);
+    });
+
+    socket.on("egPlay", msg => {
+        socket.broadcast.emit("egPlay", msg);
+    });
+
+    socket.on("stringPlay", msg => {
+        socket.broadcast.emit("stringPlay", msg);
+    });
+
+    socket.on("synthPlay", msg => {
+        socket.broadcast.emit("synthPlay", msg);
+    });
+
+    
     //test
     socket.on("A", (msg) => {
         socket.broadcast.emit("A", msg);
