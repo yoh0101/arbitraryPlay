@@ -77,7 +77,7 @@ function setup(){
     textSize(32);
 
     imageMode(CENTER);
-    pixelDensity(2);//High reso, slows frame rate
+    pixelDensity(1);//High reso, slows frame rate
 
     home = createButton("回到首頁");
     home.size(100, 30);
