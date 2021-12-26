@@ -67,7 +67,7 @@ function setup(){
     for(let i = 0;i<width/10;i++){
         particles.push(new Particle());
     }
-    song = loadSound("assets/chosen.mp3");
+    
 /*
     colorMode(HSB, 360, 100, 100, 100);
 
@@ -144,7 +144,7 @@ function setup(){
     // receive the "mosue" event and call newDrawing function
     socket.on("mouse", newDrawing);
 
-    
+    song = loadSound("assets/chosen.mp3");
 }
 
 
