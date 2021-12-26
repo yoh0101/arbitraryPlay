@@ -63,11 +63,10 @@ function preload(){
     font = loadFont("assets/fipps/Fipps-Regular.otf");
     song = loadSound("assets/chosen.mp3");
     song.playMode("restart");
-    userStarAudio();
 }
 
 function setup(){
-    
+    getAudioContext().suspend();
     createCanvas(windowWidth, windowHeight);
     for(let i = 0;i<width/10;i++){
         particles.push(new Particle());
@@ -277,7 +276,7 @@ function draw(){
 }
 
 function mousePressed() {
-
+    userStartAudio();
     //create a sprite at the mouse position and store it in a temporary variable
     var s = createSprite(mouseX, mouseY, 30, 30);
     //if no image or animation is associated it will be a rectancle of the specified size
