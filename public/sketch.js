@@ -74,7 +74,7 @@ function setup(){
 
     textFont(font);
     textAlign(CENTER, CENTER);
-    textSize(128);
+    textSize(32);
 
     imageMode(CENTER);
     pixelDensity(2);//High reso, slows frame rate
@@ -109,20 +109,20 @@ function setup(){
         ios = false;
       }
 
-    a = createButton("A");
-    a.size(100, 100);
-    a.position(50, 50);
-    a.touchStarted(abutton);
+    // a = createButton("A");
+    // a.size(100, 100);
+    // a.position(50, 50);
+    // a.touchStarted(abutton);
         
-    b = createButton("B");
-    b.size(100, 100);
-    b.position(50, 200);
-    b.touchStarted(bbutton);
+    // b = createButton("B");
+    // b.size(100, 100);
+    // b.position(50, 200);
+    // b.touchStarted(bbutton);
     
-    c = createButton("C");
-    c.size(100, 100);
-    c.position(50, 350);
-    c.touchStarted(cbutton); 
+    // c = createButton("C");
+    // c.size(100, 100);
+    // c.position(50, 350);
+    // c.touchStarted(cbutton); 
     
 
     // when join the room send the room name to server
