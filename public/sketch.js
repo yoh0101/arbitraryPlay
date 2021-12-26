@@ -56,9 +56,9 @@ class Particle {
     }
 }
 
-function preload(){
-    font = loadFont("assets/fipps/Fipps-Regular.otf");
-}
+// function preload(){
+//     font = loadFont("assets/fipps/Fipps-Regular.otf");
+// }
 
 function setup(){
     createCanvas(windowWidth, windowHeight);
@@ -223,25 +223,6 @@ function draw(){
     socket.emit("acceleration", {roomName: roomName, acceleration: [round(accelerationX), round(accelerationY), round(accelerationZ)]});
 }
 
-function textNeon(glowText, x, y, glowColor){
-    glow(glowColor, 400);
-    text(glowText, x, y);
-    text(glowText, x, y);
-    text(glowText, x, y);
-    glow(glowColor, 80);
-    text(glowText, x, y);
-    text(glowText, x, y);
-    glow(glowColor, 12);
-    text(glowText, x, y);
-    text(glowText, x, y);
-    text(glowText, x, y);
-}
-
-
-function glow(glowColor, blurriness){
-    drawingContext.shadowBlur = blurriness;
-    drawingContext.shadowColor = glowColor;
-}
 
 
 function mouseDragged() {
