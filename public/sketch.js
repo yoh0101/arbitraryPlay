@@ -5,6 +5,7 @@ const params = new URLSearchParams(window.location.search);
 const roomName = params.get("room");
 
 let font;
+let song;
 let home, a, b, c, cf1, accelPermision, cf2;
 let msg1;
 let value = 0;
@@ -56,9 +57,10 @@ class Particle {
     }
 }
 
-// function preload(){
-//     font = loadFont("assets/fipps/Fipps-Regular.otf");
-// }
+function preload(){
+    font = loadFont("assets/fipps/Fipps-Regular.otf");
+    song = loadSound("assets/chosen.wav");
+}
 
 function setup(){
     createCanvas(windowWidth, windowHeight);
@@ -179,6 +181,9 @@ function draw(){
     
     // recieve message
     socket.on("percussionPlay", (msg) => {
+        if(msg != " ") {
+            song.Play();
+        }
         msg1 = msg;
     });
     textSize(24);
