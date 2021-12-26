@@ -59,7 +59,8 @@ class Particle {
 
 function preload(){
     //font = loadFont("assets/fipps/Fipps-Regular.otf");
-    //song = loadSound("assets/chosen.mp3");
+    soundFormats("mp3", "ogg");
+    song = loadSound("assets/chosen");
 }
 
 function setup(){
@@ -184,7 +185,7 @@ function draw(){
     socket.on("percussionPlay", (msg) => {
         msg1 = msg;
     });
-    //chosen(msg1);
+    chosen(msg1);
     textSize(24);
     fill(255, 255, 255);
     text(msg1, 50, 300);
@@ -228,11 +229,11 @@ function draw(){
     socket.emit("acceleration", {roomName: roomName, acceleration: [round(accelerationX), round(accelerationY), round(accelerationZ)]});
 }
 
-// function chosen(msg) {
-//     if(msg == "It's your turn!") {
-//         song.play();
-//     }
-// }
+function chosen(msg) {
+    if(msg === "It's your turn!") {
+        song.play();
+    }
+}
 
 function mouseDragged() {
     

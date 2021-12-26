@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 258.0, 233.0, 1254.0, 794.0 ],
+		"rect" : [ 165.0, 421.0, 1254.0, 794.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,18 +39,6 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
-				"box" : 				{
-					"id" : "obj-76",
-					"maxclass" : "button",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "bang" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 497.0, 102.0, 24.0, 24.0 ]
-				}
-
-			}
-, 			{
 				"box" : 				{
 					"id" : "obj-72",
 					"maxclass" : "toggle",
@@ -143,7 +131,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 119.0, 681.0, 50.0, 22.0 ],
-					"text" : "0. 0. 1."
+					"text" : "0. 0. 0."
 				}
 
 			}
@@ -275,7 +263,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 21.0, 681.0, 53.0, 35.0 ],
-					"text" : "34. -5. 70."
+					"text" : "2. 2. 319."
 				}
 
 			}
@@ -490,7 +478,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 176.5, 380.5, 149.0, 35.0 ],
-					"text" : "roomName : percussion acceleration : 0 0 1"
+					"text" : "roomName : percussion acceleration : 0 0 0"
 				}
 
 			}
@@ -1739,15 +1727,6 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-62", 0 ],
-					"order" : 1,
-					"source" : [ "obj-72", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-76", 0 ],
-					"order" : 0,
 					"source" : [ "obj-72", 0 ]
 				}
 
@@ -1770,13 +1749,6 @@
 				"patchline" : 				{
 					"destination" : [ "obj-97", 0 ],
 					"source" : [ "obj-75", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-62", 1 ],
-					"source" : [ "obj-76", 0 ]
 				}
 
 			}
