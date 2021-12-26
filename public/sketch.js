@@ -59,7 +59,7 @@ class Particle {
 
 function preload(){
     font = loadFont("assets/fipps/Fipps-Regular.otf");
-    song = loadSound("assets/chosen.wav");
+    song = loadSound("assets/chosen.mp3");
 }
 
 function setup(){
