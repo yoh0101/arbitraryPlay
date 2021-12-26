@@ -148,7 +148,9 @@ function setup(){
 
     // recieve message
     socket.on("percussionPlay", (msg) => {
-        song.play();
+        if(msg == "It's your turn!") {
+            song.play();
+        }
         msg1 = msg;
     });
     
@@ -231,11 +233,7 @@ function draw(){
     socket.emit("acceleration", {roomName: roomName, acceleration: [round(accelerationX), round(accelerationY), round(accelerationZ)]});
 }
 
-function chosen(msg) {
-    if(msg == "It's your turn!") {
-        song.play();
-    }
-}
+
 
 function mouseDragged() {
     
