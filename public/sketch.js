@@ -178,8 +178,7 @@ function draw(){
 
     
     // recieve message
-    socket.on("percusionPlay", (msg) => {
-        console.log(msg);
+    socket.on("percussionPlay", (msg) => {
         msg1 = msg;
     });
     textSize(24);

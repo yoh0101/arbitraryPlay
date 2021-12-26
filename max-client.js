@@ -46,6 +46,6 @@ maxApi.addHandler("disconnect", () => {
     socket.close();
 });
 
-maxApi.addHandler("percusionPlay", msg => {
-    socket.emit("percusionPlay", msg);
+maxApi.addHandler("percussionPlay", msg => {
+    socket.emit("percussionPlay", msg);
 });
