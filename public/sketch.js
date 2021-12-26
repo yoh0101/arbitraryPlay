@@ -216,8 +216,8 @@ function draw(){
     text("device - x: " + round(rotationX) + ", y: " + round(rotationY) + ", z: " + round(rotationZ), 10, 160);
     socket.emit("device", {roomName: roomName, device: [round(rotationX), round(rotationY), round(rotationZ)]});
 
-    text("circle - x: " + xMotion + ", y: " + yMotion + ", radius: " + zMotion, 10, 200);
-    socket.emit("motion", {roomName: roomName, motion: [xMotion, yMotion, zMotion]});
+    // text("circle - x: " + xMotion + ", y: " + yMotion + ", radius: " + zMotion, 10, 200);
+    // socket.emit("motion", {roomName: roomName, motion: [xMotion, yMotion, zMotion]});
 
     text("acceleration - x:" + round(accelerationX) + ", y:" + round(accelerationY) + ", z:" + round(accelerationZ), 10, 240);
     socket.emit("acceleration", {roomName: roomName, acceleration: [round(accelerationX), round(accelerationY), round(accelerationZ)]});
