@@ -64,6 +64,7 @@ class Particle {
 
 function setup(){
     createCanvas(windowWidth, windowHeight);
+    song = loadSound("assets/chosen.mp3");
     for(let i = 0;i<width/10;i++){
         particles.push(new Particle());
     }
@@ -144,7 +145,7 @@ function setup(){
     // receive the "mosue" event and call newDrawing function
     socket.on("mouse", newDrawing);
 
-    song = loadSound("assets/chosen.mp3");
+    
 }
 
 
@@ -231,8 +232,6 @@ function draw(){
 function chosen(msg) {
     if(msg == "It's your turn!") {
         song.play();
-    } else {
-        return 0;
     }
 }
 
