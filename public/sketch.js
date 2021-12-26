@@ -1,3 +1,5 @@
+const { text } = require("express");
+
 const socket = io.connect(); // connect to the address
 
 // get the room name from url path
@@ -57,15 +59,14 @@ class Particle {
     }
 }
 
-// function preload(){
-//     //font = loadFont("assets/fipps/Fipps-Regular.otf");
-//     soundFormats("mp3", "ogg");
-//     song = loadSound("assets/chosen");
-// }
-
-function setup(){
+function preload(){
+    font = loadFont("assets/fipps/Fipps-Regular.otf");
     song = loadSound("assets/chosen.mp3");
     song.playMode("restart");
+}
+
+function setup(){
+    
     createCanvas(windowWidth, windowHeight);
     for(let i = 0;i<width/10;i++){
         particles.push(new Particle());
@@ -226,7 +227,7 @@ function draw(){
     //textNeon("arbitraryPlay", width/2, height/2, color(332, 58, 91,100));
 
     
-    
+    textFont(font);
     textSize(24);
     fill(255, 255, 255);
     text(msg1, 50, 300);
