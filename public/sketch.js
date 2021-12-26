@@ -57,14 +57,13 @@ class Particle {
     }
 }
 
-// function preload(){
-//     font = loadFont("assets/fipps/Fipps-Regular.otf");
-    
-// }
+function preload(){
+    //font = loadFont("assets/fipps/Fipps-Regular.otf");
+    song = loadSound("assets/chosen.mp3");
+}
 
 function setup(){
     createCanvas(windowWidth, windowHeight);
-    song = loadSound("assets/chosen.mp3");
     for(let i = 0;i<width/10;i++){
         particles.push(new Particle());
     }
