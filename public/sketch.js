@@ -72,6 +72,8 @@ function setup(){
         particles.push(new Particle());
     }
     
+    textFont(font);
+
 /*
     colorMode(HSB, 360, 100, 100, 100);
 
@@ -227,7 +229,7 @@ function draw(){
     //textNeon("arbitraryPlay", width/2, height/2, color(332, 58, 91,100));
 
     
-    textFont(font);
+    
     textSize(24);
     fill(255, 255, 255);
     text(msg1, 50, 300);
