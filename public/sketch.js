@@ -63,10 +63,11 @@ function preload(){
     font = loadFont("assets/fipps/Fipps-Regular.otf");
     song = loadSound("assets/chosen.mp3");
     song.playMode("restart");
+    userStarAudio();
 }
 
 function setup(){
-    userStarAudio();
+    
     createCanvas(windowWidth, windowHeight);
     for(let i = 0;i<width/10;i++){
         particles.push(new Particle());
