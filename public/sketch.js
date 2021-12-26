@@ -182,7 +182,7 @@ function draw(){
     // recieve message
     socket.on("percussionPlay", (msg) => {
         if(msg != " ") {
-            song.Play();
+            song.play();
         }
         msg1 = msg;
     });
