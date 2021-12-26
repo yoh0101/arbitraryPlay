@@ -146,7 +146,12 @@ function setup(){
     // receive the "mosue" event and call newDrawing function
     socket.on("mouse", newDrawing);
 
-    
+    // recieve message
+    socket.on("percussionPlay", (msg) => {
+        
+        msg1 = msg;
+    });
+    chosen(msg1);
 }
 
 
@@ -182,12 +187,7 @@ function draw(){
     //textNeon("arbitraryPlay", width/2, height/2, color(332, 58, 91,100));
 
     
-    // recieve message
-    socket.on("percussionPlay", (msg) => {
-        
-        msg1 = msg;
-    });
-    chosen(msg1);
+    
     textSize(24);
     fill(255, 255, 255);
     text(msg1, 50, 300);
@@ -233,7 +233,7 @@ function draw(){
 
 function chosen(msg) {
     if(msg == "It's your turn!") {
-        song.play(1);
+        song.play();
     }
 }
 
