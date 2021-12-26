@@ -181,9 +181,9 @@ function draw(){
     
     // recieve message
     socket.on("percussionPlay", (msg) => {
-        chosen(msg);
         msg1 = msg;
     });
+    chosen(msg1);
     textSize(24);
     fill(255, 255, 255);
     text(msg1, 50, 300);
