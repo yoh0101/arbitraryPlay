@@ -179,8 +179,8 @@ function draw(){
     
     // recieve message
     socket.on("percusion", (msg) => {
+        console.log(msg);
         msg1 = msg;
-        console.log(msg1);
     });
     textSize(24);
     fill(255, 255, 255);
