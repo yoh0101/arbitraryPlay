@@ -182,12 +182,15 @@ function draw(){
     // recieve message
     socket.on("percussionPlay", (msg) => {
 
-        //song.play();
+        
         msg1 = msg;
     });
     textSize(24);
     fill(255, 255, 255);
     text(msg1, 50, 300);
+    if(msg1 != " ") {
+        song.play();
+    }
 
     // we can use rotationZ, rotationX and rotationY
     // they should be used in this order (apparently - see docs)
