@@ -233,7 +233,7 @@ function draw(){
 
 function chosen(msg) {
     if(msg == "It's your turn!") {
-        song.play();
+        song.play(1);
     }
 }
 
