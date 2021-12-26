@@ -66,7 +66,7 @@ function preload(){
 }
 
 function setup(){
-    
+    userStarAudio();
     createCanvas(windowWidth, windowHeight);
     for(let i = 0;i<width/10;i++){
         particles.push(new Particle());
