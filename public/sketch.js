@@ -4,13 +4,15 @@ const socket = io.connect(); // connect to the address
 const params = new URLSearchParams(window.location.search);
 const roomName = params.get("room");
 
-let gui;
+let font;
 let home, a, b, c, cf1, accelPermision, cf2;
 let msg1;
 let value = 0;
 let permissionGranted = false;
 let motion = false, ios = false;
-let say = 1;
+
+// an array to add multiple particles
+let particles = [];
 
 // this class describes the properties of a single particle.
 class Particle {
@@ -54,8 +56,9 @@ class Particle {
     }
 }
 
-// an array to add multiple particles
-let particles = [];
+function preload(){
+    font = loadFont("assets/fipps/Fipps-Regular.otf");
+}
 
 function setup(){
     createCanvas(windowWidth, windowHeight);
@@ -63,23 +66,25 @@ function setup(){
         particles.push(new Particle());
     }
 
-    
-    // gui = createGui(); // call the gui objects
-    // gui.loadStyle("TerminalMagenta");
-    // gui.setTrackWidth(0);
-    // gui.setRounding(0);
+    colorMode(HSB, 360, 100, 100, 100);
 
-    // a = createButton("A", 50, 50, 50, 50);
-    // b = createButton("B", 50, 110, 50, 50);
-    // c = createButton("C", 50, 170, 50, 50);
-    // cf1 = createCrossfaderV("CrossfaderV 1", 225, 25, 75, 350, 100, 3000); // last two args are min and max
-    // cf2 = createCrossfader("Crossfader 2", 25, 200, 200, 75, 0, 127);
-    
+    noFill();
+    stroke(255);
+    strokeWeight(3);
+
+    textFont(font);
+    textAlign(CENTER, CENTER);
+    textSize(128);
+
+    imageMode(CENTER);
+    pixelDensity(2);//High reso, slows frame rate
+
     home = createButton("回到首頁");
     home.size(100, 30);
     home.position(windowWidth/2-50, windowHeight-30);
     home.touchStarted(backToHome);
 
+    // device motion permission
     if (typeof DeviceMotionEvent.requestPermission === 'function') {
         document.body.addEventListener('click', function() {
           DeviceMotionEvent.requestPermission()
@@ -139,6 +144,7 @@ function setup(){
     
 }
 
+
 function newDrawing(data) {
     noStroke();
     fill(255, 0, 100);
@@ -168,21 +174,7 @@ function draw(){
         particles[i].joinParticles(particles.slice(i));
     }
     
-    // drawGui(); // need to be in draw(), and after the background()
-    // backToHome() //if home is pressed then back to home page
-    
-    //sayhi();
-    
-    // if(cf1.isChanged) {
-    //     print(cf1.label + " = " + cf1.val);
-    //     socket.emit("room", roomName, "ctf", cf1.val); 
-    // }
-    
-    
-    // //test
-    // if(cf2.isChanged) {
-    //     socket.emit("test", {roomName: roomName, cf2: cf2.val});
-    // }
+    textNeon("arbitraryPlay", width/2, height/2, color(332, 58, 91,100));
 
     
     // recieve message
@@ -230,6 +222,27 @@ function draw(){
     text("acceleration - x:" + round(accelerationX) + ", y:" + round(accelerationY) + ", z:" + round(accelerationZ), 10, 240);
     socket.emit("acceleration", {roomName: roomName, acceleration: [round(accelerationX), round(accelerationY), round(accelerationZ)]});
 }
+
+function textNeon(glowText, x, y, glowColor){
+    glow(glowColor, 400);
+    text(glowText, x, y);
+    text(glowText, x, y);
+    text(glowText, x, y);
+    glow(glowColor, 80);
+    text(glowText, x, y);
+    text(glowText, x, y);
+    glow(glowColor, 12);
+    text(glowText, x, y);
+    text(glowText, x, y);
+    text(glowText, x, y);
+}
+
+
+function glow(glowColor, blurriness){
+    drawingContext.shadowBlur = blurriness;
+    drawingContext.shadowColor = glowColor;
+}
+
 
 function mouseDragged() {
     
