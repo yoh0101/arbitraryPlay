@@ -74,7 +74,7 @@ function setup(){
 
     textFont(font);
     textAlign(CENTER, CENTER);
-    textSize(32);
+    //textSize(32);
 
     imageMode(CENTER);
     pixelDensity(1);//High reso, slows frame rate
