@@ -31,6 +31,9 @@ maxApi.addHandler("connect", (url) => {
     socket.on("motion", msg => {
         maxApi.outlet(msg);
     });
+    socket.on("acceleration", msg => {
+        maxApi.outlet(msg);
+    });
     
     // test
     socket.on("test", msg => {

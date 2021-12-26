@@ -228,6 +228,7 @@ function draw(){
     socket.emit("motion", {roomName: roomName, motion: [xMotion, yMotion, zMotion]});
 
     text("acceleration - x:" + round(accelerationX) + ", y:" + round(accelerationY) + ", z:" + round(accelerationZ), 10, 240);
+    socket.emit("acceleration", {roomName: roomName, acceleration: [round(accelerationX), round(accelerationY), round(accelerationZ)]});
 }
 
 function mouseDragged() {
