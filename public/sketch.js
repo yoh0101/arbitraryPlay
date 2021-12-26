@@ -148,7 +148,7 @@ function setup(){
 
     // recieve message
     socket.on("percussionPlay", (msg) => {
-        chosen(msg);
+        song.play();
         msg1 = msg;
     });
     
