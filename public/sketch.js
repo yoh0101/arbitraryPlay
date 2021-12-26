@@ -268,6 +268,8 @@ function draw(){
 
     text("acceleration - x:" + round(accelerationX) + ", y:" + round(accelerationY) + ", z:" + round(accelerationZ), 10, 240);
     socket.emit("acceleration", {roomName: roomName, acceleration: [round(accelerationX), round(accelerationY), round(accelerationZ)]});
+
+    drawSprites();
 }
 
 function mousePressed() {
