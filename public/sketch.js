@@ -273,13 +273,15 @@ function draw(){
     text("acceleration - x:" + round(accelerationX) + ", y:" + round(accelerationY) + ", z:" + round(accelerationZ), 10, 240);
     socket.emit("acceleration", {roomName: roomName, acceleration: [round(accelerationX), round(accelerationY), round(accelerationZ)]});
 
+    //draw all the sprites added to the sketch so far
+    //the positions will be updated automatically at every cycle
     drawSprites();
 }
 
 function mousePressed() {
     //starts the AudioContext on a user gesture
     userStartAudio();
-    
+
     //create a sprite at the mouse position and store it in a temporary variable
     var s = createSprite(mouseX, mouseY, 30, 30);
     //if no image or animation is associated it will be a rectancle of the specified size

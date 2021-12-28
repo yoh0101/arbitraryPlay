@@ -49,3 +49,23 @@ maxApi.addHandler("disconnect", () => {
 maxApi.addHandler("percussionPlay", msg => {
     socket.emit("percussionPlay", msg);
 });
+
+maxApi.addHandler("pianoPlay", msg => {
+    socket.emit("pianoPlay", msg);
+});
+
+maxApi.addHandler("agPlay", msg => {
+    socket.emit("agPlay", msg);
+});
+
+maxApi.addHandler("egPlay", msg => {
+    socket.emit("egPlay", msg);
+});
+
+maxApi.addHandler("stringPlay", msg => {
+    socket.emit("stringPlay", msg);
+});
+
+maxApi.addHandler("synthPlay", msg => {
+    socket.emit("synthPlay", msg);
+});
