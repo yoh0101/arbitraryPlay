@@ -73,7 +73,10 @@ function setup(){
     }
     
     textFont(font);
-    
+
+    textSize(20);
+    fill(82,64,106);
+    text(roomName, windowWidth/2, 30);
 /*
     colorMode(HSB, 360, 100, 100, 100);
 
@@ -297,13 +300,13 @@ function draw(){
     fill(255, 100, 50);
     //text("click to start on iOS", 10, 80);
     //text("on a mobile: twist, and tilt your device", 10, 120);
-    text("device - x: " + round(rotationX) + ", y: " + round(rotationY) + ", z: " + round(rotationZ), 10, 160);
+    text("device - x: " + round(rotationX) + ", y: " + round(rotationY) + ", z: " + round(rotationZ), 10, windowHeight-100);
     socket.emit("device", {roomName: roomName, device: [round(rotationX), round(rotationY), round(rotationZ)]});
 
     // text("circle - x: " + xMotion + ", y: " + yMotion + ", radius: " + zMotion, 10, 200);
     // socket.emit("motion", {roomName: roomName, motion: [xMotion, yMotion, zMotion]});
 
-    text("acceleration - x:" + round(accelerationX) + ", y:" + round(accelerationY) + ", z:" + round(accelerationZ), 10, 240);
+    text("acceleration - x:" + round(accelerationX) + ", y:" + round(accelerationY) + ", z:" + round(accelerationZ), 10, windowHeight-50);
     socket.emit("acceleration", {roomName: roomName, acceleration: [round(accelerationX), round(accelerationY), round(accelerationZ)]});
 
     //draw all the sprites added to the sketch so far
