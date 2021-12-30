@@ -9,7 +9,7 @@ const roomName = params.get("room");
 let font;
 let song;
 let home, a, b, c, cf1, accelPermision, cf2;
-let msg1;
+let msg1, msg2, msg3, msg4, msg5, msg6;
 let value = 0;
 let permissionGranted = false;
 let motion = false, ios = false;
@@ -164,35 +164,35 @@ function setup(){
         if(msg == "It's your turn!") {
             song.play();
         }
-        msg1 = msg;
+        msg2 = msg;
     });
 
     socket.on("agPlay", (msg) => {
         if(msg == "It's your turn!") {
             song.play();
         }
-        msg1 = msg;
+        msg3 = msg;
     });
 
     socket.on("egPlay", (msg) => {
         if(msg == "It's your turn!") {
             song.play();
         }
-        msg1 = msg;
+        msg4 = msg;
     });
 
     socket.on("stringPlay", (msg) => {
         if(msg == "It's your turn!") {
             song.play();
         }
-        msg1 = msg;
+        msg5 = msg;
     });
 
     socket.on("synthPlay", (msg) => {
         if(msg == "It's your turn!") {
             song.play();
         }
-        msg1 = msg;
+        msg6 = msg;
     });
     
 }
@@ -234,6 +234,11 @@ function draw(){
     textSize(24);
     fill(255, 255, 255);
     text(msg1, 50, 300);
+    text(msg2, 50, 300);
+    text(msg3, 50, 300);
+    text(msg4, 50, 300);
+    text(msg5, 50, 300);
+    text(msg6, 50, 300);
     
 
     // we can use rotationZ, rotationX and rotationY
