@@ -260,7 +260,7 @@ function draw() {
     }
     
     // title
-    textSize(20);
+    textSize(25);
     fill(255,0,203);
     text(roomName, 10, 50);
 
@@ -296,7 +296,7 @@ function draw() {
     // text to provide instructions and
     // document values at the top of the screen
     noStroke();
-    textSize(width / 20);
+    textSize(width / 25);
     textFont("'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace");
 
     fill(255, 100, 50);
