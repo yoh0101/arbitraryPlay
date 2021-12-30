@@ -296,19 +296,19 @@ function draw() {
     // text to provide instructions and
     // document values at the top of the screen
     noStroke();
-    textSize(width / 35);
+    textSize(width / 30);
     textFont("'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace");
 
     fill(255, 100, 50);
     //text("click to start on iOS", 10, 80);
     //text("on a mobile: twist, and tilt your device", 10, 120);
-    text("device - x: " + round(rotationX) + ", y: " + round(rotationY) + ", z: " + round(rotationZ), 10, windowHeight-150);
+    text("device - x: " + round(rotationX) + ", y: " + round(rotationY) + ", z: " + round(rotationZ), 10, windowHeight-130);
     socket.emit("device", {roomName: roomName, device: [round(rotationX), round(rotationY), round(rotationZ)]});
 
     // text("circle - x: " + xMotion + ", y: " + yMotion + ", radius: " + zMotion, 10, 200);
     // socket.emit("motion", {roomName: roomName, motion: [xMotion, yMotion, zMotion]});
 
-    text("acceleration - x:" + round(accelerationX) + ", y:" + round(accelerationY) + ", z:" + round(accelerationZ), 10, windowHeight-100);
+    text("acceleration - x:" + round(accelerationX) + ", y:" + round(accelerationY) + ", z:" + round(accelerationZ), 10, windowHeight-80);
     socket.emit("acceleration", {roomName: roomName, acceleration: [round(accelerationX), round(accelerationY), round(accelerationZ)]});
 
     //draw all the sprites added to the sketch so far
