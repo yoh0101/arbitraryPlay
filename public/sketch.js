@@ -74,9 +74,7 @@ function setup(){
     
     textFont(font);
 
-    textSize(20);
-    fill(82,64,106);
-    text(roomName, windowWidth/2, 30);
+    
 /*
     colorMode(HSB, 360, 100, 100, 100);
 
@@ -255,6 +253,12 @@ function draw(){
             background("#82c2f1");
             break;
     }
+
+    // title
+    textSize(20);
+    fill(82,64,106);
+    textAlign(CENTER, 30);
+    text(roomName);
     
     for(let i = 0;i<particles.length;i++) {
         particles[i].createParticle();
