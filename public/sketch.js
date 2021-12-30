@@ -157,6 +157,8 @@ function setup(){
         if(msg == "It's your turn!" && roomName == "percussion") {
             song.play();
             msg1 = msg;
+        } else {
+            msg1 = msg;
         }
         
     });
@@ -164,6 +166,8 @@ function setup(){
     socket.on("pianoPlay", (msg) => {
         if(msg == "It's your turn!" && roomName == "piano") {
             song.play();
+            msg1 = msg;
+        } else {
             msg1 = msg;
         }
         
