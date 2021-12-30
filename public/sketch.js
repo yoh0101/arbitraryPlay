@@ -160,7 +160,6 @@ function setup(){
         } else {
             msg1 = msg;
         }
-        
     });
 
     socket.on("pianoPlay", (msg) => {
@@ -170,35 +169,42 @@ function setup(){
         } else {
             msg1 = msg;
         }
-        
     });
 
     socket.on("agPlay", (msg) => {
-        if(msg == "It's your turn!") {
+        if(msg == "It's your turn!" && roomName == "AG") {
             song.play();
+            msg1 = msg;
+        } else {
+            msg1 = msg;
         }
-        msg3 = msg;
     });
 
     socket.on("egPlay", (msg) => {
-        if(msg == "It's your turn!") {
+        if(msg == "It's your turn!" && roomName == "EG") {
             song.play();
+            msg1 = msg;
+        } else {
+            msg1 = msg;
         }
-        msg4 = msg;
     });
 
     socket.on("stringPlay", (msg) => {
-        if(msg == "It's your turn!") {
+        if(msg == "It's your turn!" && roomName == "string") {
             song.play();
+            msg1 = msg;
+        } else {
+            msg1 = msg;
         }
-        msg5 = msg;
     });
 
     socket.on("synthPlay", (msg) => {
-        if(msg == "It's your turn!") {
+        if(msg == "It's your turn!" && roomName == "synth") {
             song.play();
+            msg1 = msg;
+        } else {
+            msg1 = msg;
         }
-        msg6 = msg;
     });
     
 }
