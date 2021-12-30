@@ -20,7 +20,7 @@ let particles = [];
 class Particle {
     // setting the co-ordinates, radius and the
     // speed of a particle in both the co-ordinates axes.
-    constructor(){
+    constructor() {
         this.x = random(0,width);
         this.y = random(0,height);
         this.r = random(1,8);
@@ -58,13 +58,13 @@ class Particle {
     }
 }
 
-function preload(){
+function preload() {
     font = loadFont("assets/fipps/Fipps-Regular.otf");
     song = loadSound("assets/chosen.mp3");
     song.playMode("restart");
 }
 
-function setup(){
+function setup() {
     // mimics the autoplay policy
     getAudioContext().suspend();
     createCanvas(windowWidth, windowHeight);
@@ -231,7 +231,7 @@ function cbutton() {
 }
 
 
-function draw(){
+function draw() {
     switch (roomName) {
         case "Percusion":
             background("#0f0f0f");
