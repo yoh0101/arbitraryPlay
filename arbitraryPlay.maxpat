@@ -58,7 +58,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 222.0, 147.0, 50.0, 22.0 ],
-					"text" : "120."
+					"text" : "80."
 				}
 
 			}
@@ -82,7 +82,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 44.5, 156.0, 50.0, 22.0 ],
-					"text" : "2"
+					"text" : "1"
 				}
 
 			}
@@ -277,7 +277,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 398.5, 698.0, 50.0, 22.0 ],
-					"text" : "3. 1. 2."
+					"text" : "-1. 0. 1."
 				}
 
 			}
@@ -302,8 +302,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 300.5, 698.0, 53.0, 35.0 ],
-					"presentation_linecount" : 2,
-					"text" : "24. -22. 339."
+					"text" : "49. -22. 11."
 				}
 
 			}
@@ -3781,7 +3780,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 196.0, 722.0, 50.0, 22.0 ],
-					"text" : "-1."
+					"text" : "1."
 				}
 
 			}
@@ -3817,7 +3816,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 119.0, 681.0, 50.0, 22.0 ],
-					"text" : "-1. 0. 1."
+					"text" : "1. 0. 2."
 				}
 
 			}
@@ -3899,8 +3898,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 688.0, 602.0, 68.0, 22.0 ],
-					"text" : "route synth"
+					"patching_rect" : [ 733.0, 608.0, 70.0, 22.0 ],
+					"text" : "route Synth"
 				}
 
 			}
@@ -3908,11 +3907,11 @@
 				"box" : 				{
 					"id" : "obj-114",
 					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 475.0, 608.0, 57.0, 22.0 ],
-					"text" : "route EG"
+					"numinlets" : 3,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "" ],
+					"patching_rect" : [ 514.0, 608.0, 115.0, 22.0 ],
+					"text" : "route Electric Guitar"
 				}
 
 			}
@@ -3920,11 +3919,11 @@
 				"box" : 				{
 					"id" : "obj-113",
 					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 385.5, 608.0, 56.0, 22.0 ],
-					"text" : "route AG"
+					"numinlets" : 3,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "" ],
+					"patching_rect" : [ 385.5, 608.0, 120.0, 22.0 ],
+					"text" : "route Acoustic Guitar"
 				}
 
 			}
@@ -3935,8 +3934,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 592.0, 602.0, 69.0, 22.0 ],
-					"text" : "route string"
+					"patching_rect" : [ 651.0, 608.0, 71.0, 22.0 ],
+					"text" : "route String"
 				}
 
 			}
@@ -3949,7 +3948,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 21.0, 681.0, 53.0, 35.0 ],
-					"text" : "29. 10. 90."
+					"text" : "28. -16. 4."
 				}
 
 			}
@@ -4102,8 +4101,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 21.0, 602.0, 97.0, 22.0 ],
-					"text" : "route percussion"
+					"patching_rect" : [ 21.0, 602.0, 99.0, 22.0 ],
+					"text" : "route Percussion"
 				}
 
 			}
@@ -4114,8 +4113,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 294.0, 608.0, 69.0, 22.0 ],
-					"text" : "route piano"
+					"patching_rect" : [ 294.0, 608.0, 70.0, 22.0 ],
+					"text" : "route Piano"
 				}
 
 			}
@@ -4164,7 +4163,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 176.5, 380.5, 149.0, 35.0 ],
-					"text" : "roomName : percussion acceleration : -1 0 1"
+					"text" : "roomName : synth acceleration : 0 0 0"
 				}
 
 			}
@@ -4411,8 +4410,6 @@
 					"saved_object_attributes" : 					{
 						"autostart" : 1,
 						"defer" : 0,
-						"node_bin_path" : "",
-						"npm_bin_path" : "",
 						"watch" : 0
 					}
 ,

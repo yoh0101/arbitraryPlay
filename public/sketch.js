@@ -153,56 +153,56 @@ function setup(){
     /* from Max */
     // choose percussion
     socket.on("percussionPlay", (msg) => {
-        if(msg == "It's your turn!" && roomName == "percussion") {
+        if(msg == "It's your turn!" && roomName == "Percussion") {
             song.play();
             msg1 = msg;
-        } else if(msg == " " && roomName == "percussion") {
+        } else if(msg == " " && roomName == "Percussion") {
              // clear msg1
             msg1 = msg;
         }
     });
 
     socket.on("pianoPlay", (msg) => {
-        if(msg == "It's your turn!" && roomName == "piano") {
+        if(msg == "It's your turn!" && roomName == "Piano") {
             song.play();
             msg1 = msg;
-        } else if(msg == " " && roomName == "piano") {
+        } else if(msg == " " && roomName == "Piano") {
             msg1 = msg;
         }
     });
 
     socket.on("agPlay", (msg) => {
-        if(msg == "It's your turn!" && roomName == "AG") {
+        if(msg == "It's your turn!" && roomName == "Acoustic Guitar") {
             song.play();
             msg1 = msg;
-        } else if(msg == " " && roomName == "AG") {
+        } else if(msg == " " && roomName == "Acoustic Guitar") {
             msg1 = msg;
         }
     });
 
     socket.on("egPlay", (msg) => {
-        if(msg == "It's your turn!" && roomName == "EG") {
+        if(msg == "It's your turn!" && roomName == "Electric Guitar") {
             song.play();
             msg1 = msg;
-        } else if(msg == " " && roomName == "EG") {
+        } else if(msg == " " && roomName == "Electric Guitar") {
             msg1 = msg;
         }
     });
 
     socket.on("stringPlay", (msg) => {
-        if(msg == "It's your turn!" && roomName == "string") {
+        if(msg == "It's your turn!" && roomName == "String") {
             song.play();
             msg1 = msg;
-        } else if(msg == " " && roomName == "string") {
+        } else if(msg == " " && roomName == "String") {
             msg1 = msg;
         }
     });
 
     socket.on("synthPlay", (msg) => {
-        if(msg == "It's your turn!" && roomName == "synth") {
+        if(msg == "It's your turn!" && roomName == "Synth") {
             song.play();
             msg1 = msg;
-        } else if(msg == " " && roomName == "synth") {
+        } else if(msg == " " && roomName == "Synth") {
             msg1 = msg;
         }
     });
@@ -233,23 +233,23 @@ function cbutton() {
 
 function draw(){
     switch (roomName) {
-        case "percusion":
+        case "Percusion":
             background("#0f0f0f");
             break;
-        case "piano":
-            background("#ffb4e3");
+        case "Piano":
+            background("#8ed7c53");
             break;
-        case "AG":
-            background("#ff9dc7");
+        case "Acoustic Guitar":
+            background("#f48da2");
             break;
-        case "EG":
-            background("#f983b6");
+        case "Electric Guitar":
+            background("#c197d2");
             break;
         case "string":
-            background("#b4e6ff");
+            background("#fadd77");
             break;
         case "synth":
-            background("#86d1f6");
+            background("#82c2f1");
             break;
     }
     
