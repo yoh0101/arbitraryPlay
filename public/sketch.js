@@ -8,7 +8,7 @@ const roomName = params.get("room");
 let font;
 let song;
 let home, a, b, c, cf1, accelPermision, cf2;
-let msg1, msg2, msg3, msg4, msg5, msg6;
+let msg1;
 let value = 0;
 let permissionGranted = false;
 let motion = false, ios = false;
