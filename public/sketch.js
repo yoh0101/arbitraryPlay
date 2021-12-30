@@ -154,17 +154,19 @@ function setup(){
     /* from Max */
     // choose percussion
     socket.on("percussionPlay", (msg) => {
-        if(msg == "It's your turn!") {
+        if(msg == "It's your turn!" && roomName == percussion) {
             song.play();
+            msg1 = msg;
         }
-        msg1 = msg;
+        
     });
 
     socket.on("pianoPlay", (msg) => {
-        if(msg == "It's your turn!") {
+        if(msg == "It's your turn!" && roomName == piano) {
             song.play();
+            msg1 = msg;
         }
-        msg2 = msg;
+        
     });
 
     socket.on("agPlay", (msg) => {
@@ -234,11 +236,7 @@ function draw(){
     textSize(24);
     fill(255, 255, 255);
     text(msg1, 50, 300);
-    text(msg2, 50, 300);
-    text(msg3, 50, 300);
-    text(msg4, 50, 300);
-    text(msg5, 50, 300);
-    text(msg6, 50, 300);
+    
     
 
     // we can use rotationZ, rotationX and rotationY
