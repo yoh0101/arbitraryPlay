@@ -233,23 +233,23 @@ function cbutton() {
 
 function draw() {
     switch (roomName) {
-        case "Percusion":
-            background("#0f0f0f");
+        case "Percussion":
+            background("#a3b7a0");
             break;
         case "Piano":
-            background("#8ed7c53");
+            background("#64606e");
             break;
         case "Acoustic Guitar":
-            background("#f48da2");
+            background("#4a3354");
             break;
         case "Electric Guitar":
-            background("#c197d2");
+            background("#251733");
             break;
         case "String":
-            background("#fadd77");
+            background("#0d1b11");
             break;
         case "Synth":
-            background("#82c2f1");
+            background("#0f0f0f");
             break;
     }
     
