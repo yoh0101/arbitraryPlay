@@ -73,6 +73,7 @@ function setup(){
     }
     
     textFont(font);
+
 /*
     colorMode(HSB, 360, 100, 100, 100);
 
@@ -343,30 +344,6 @@ function mouseDragged() {
 }
 
 
-
-
-
-
-function sayhi() {
-    
-    if(a.mousePressed) {
-        print(a.label + " is pressed.");
-    // sent the name talk value "hi" to server 
-        let say = 1;
-        socket.emit("talk", say);
-    } else if(b.isPressed) {
-        print(b.label + " is pressed.");
-    // sent the name talk value "hi" to server 
-        let say = 2;
-        socket.emit("talk", say);
-    } else if(c.isPressed) {
-        print(c.label + " is pressed.");
-    // sent the name talk value "hi" to server 
-        let say = 3;
-        socket.emit("talk", say);
-    }
-    
-}
 
 function backToHome() {
     window.location = 'index.html'; 
