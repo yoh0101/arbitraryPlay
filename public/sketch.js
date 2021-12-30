@@ -257,8 +257,7 @@ function draw(){
     // title
     textSize(20);
     fill(82,64,106);
-    textAlign(CENTER, 30);
-    text(roomName);
+    text(roomName, windowWidth/2-50, 30);
     
     for(let i = 0;i<particles.length;i++) {
         particles[i].createParticle();
