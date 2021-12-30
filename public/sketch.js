@@ -262,7 +262,7 @@ function draw() {
     // title
     textSize(20);
     fill(233,155,213);
-    text(roomName, 10, 30);
+    text(roomName, 10, 50);
 
 
     //textNeon("arbitraryPlay", width/2, height/2, color(332, 58, 91,100));
@@ -302,13 +302,13 @@ function draw() {
     fill(255, 100, 50);
     //text("click to start on iOS", 10, 80);
     //text("on a mobile: twist, and tilt your device", 10, 120);
-    text("device - x: " + round(rotationX) + ", y: " + round(rotationY) + ", z: " + round(rotationZ), 10, 160);
+    text("device - x: " + round(rotationX) + ", y: " + round(rotationY) + ", z: " + round(rotationZ), 10, windowHeight-150);
     socket.emit("device", {roomName: roomName, device: [round(rotationX), round(rotationY), round(rotationZ)]});
 
     // text("circle - x: " + xMotion + ", y: " + yMotion + ", radius: " + zMotion, 10, 200);
     // socket.emit("motion", {roomName: roomName, motion: [xMotion, yMotion, zMotion]});
 
-    text("acceleration - x:" + round(accelerationX) + ", y:" + round(accelerationY) + ", z:" + round(accelerationZ), 10, 240);
+    text("acceleration - x:" + round(accelerationX) + ", y:" + round(accelerationY) + ", z:" + round(accelerationZ), 10, windowHeight-100);
     socket.emit("acceleration", {roomName: roomName, acceleration: [round(accelerationX), round(accelerationY), round(accelerationZ)]});
 
     //draw all the sprites added to the sketch so far
