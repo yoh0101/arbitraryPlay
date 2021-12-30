@@ -31,7 +31,7 @@ class Particle {
     // creation of a particle.
     createParticle() {
         noStroke();
-        fill('rgba(200,169,169,0.5)');
+        fill('rgba(203,251,255,0.5)');
         circle(this.x,this.y,this.r);
     }
     
@@ -261,7 +261,7 @@ function draw() {
     
     // title
     textSize(20);
-    fill(233,155,213);
+    fill(255,0,203);
     text(roomName, 10, 50);
 
 
