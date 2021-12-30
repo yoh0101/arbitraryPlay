@@ -1,4 +1,3 @@
-//const { text } = require("express");
 
 const socket = io.connect(); // connect to the address
 
@@ -74,7 +73,7 @@ function setup(){
     }
     
     textFont(font);
-
+    text()
 /*
     colorMode(HSB, 360, 100, 100, 100);
 
@@ -233,7 +232,27 @@ function cbutton() {
 
 
 function draw(){
-    background("#0f0f0f");
+    switch (roomName) {
+        case "percusion":
+            background("#0f0f0f");
+            break;
+        case "piano":
+            background("#ffb4e3");
+            break;
+        case "AG":
+            background("#ff9dc7");
+            break;
+        case "EG":
+            background("#f983b6");
+            break;
+        case "string":
+            background("#b4e6ff");
+            break;
+        case "synth":
+            background("#86d1f6");
+            break;
+    }
+    
     for(let i = 0;i<particles.length;i++) {
         particles[i].createParticle();
         particles[i].moveParticle();
