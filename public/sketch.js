@@ -259,9 +259,14 @@ function draw() {
         particles[i].joinParticles(particles.slice(i));
     }
     
+    // title
+    textSize(20);
+    fill(233,155,213);
+    text(roomName, windowWidth/2, 30);
+
+
     //textNeon("arbitraryPlay", width/2, height/2, color(332, 58, 91,100));
 
-    
     
     textSize(24);
     fill(255, 255, 255);
