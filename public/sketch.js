@@ -296,7 +296,7 @@ function draw() {
     // text to provide instructions and
     // document values at the top of the screen
     noStroke();
-    textSize(width / 30);
+    textSize(width / 20);
     textFont("'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace");
 
     fill(255, 100, 50);
