@@ -185,7 +185,7 @@ function setup(){
         if(msg == "It's your turn!" && roomName == "EG") {
             song.play();
             msg1 = msg;
-        } else {
+        } else if(msg == " " && roomName == "EG") {
             msg1 = msg;
         }
     });
@@ -194,7 +194,7 @@ function setup(){
         if(msg == "It's your turn!" && roomName == "string") {
             song.play();
             msg1 = msg;
-        } else {
+        } else if(msg == " " && roomName == "string") {
             msg1 = msg;
         }
     });
@@ -203,7 +203,7 @@ function setup(){
         if(msg == "It's your turn!" && roomName == "synth") {
             song.play();
             msg1 = msg;
-        } else {
+        } else if(msg == " " && roomName == "synth") {
             msg1 = msg;
         }
     });
