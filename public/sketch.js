@@ -245,10 +245,10 @@ function draw(){
         case "Electric Guitar":
             background("#c197d2");
             break;
-        case "string":
+        case "String":
             background("#fadd77");
             break;
-        case "synth":
+        case "Synth":
             background("#82c2f1");
             break;
     }
