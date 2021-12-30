@@ -262,10 +262,10 @@ function draw(){
         particles[i].joinParticles(particles.slice(i));
     }
     
-    // title
-    textSize(20);
-    fill(82,64,106);
-    text(roomName, windowWidth/2, 30);
+    // // title
+    // textSize(20);
+    // fill(82,64,106);
+    // text(roomName, windowWidth/2, 30);
     
     // msg
     textSize(24);
