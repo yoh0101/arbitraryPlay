@@ -73,7 +73,7 @@ function setup(){
     }
     
     textFont(font);
-    text()
+    
 /*
     colorMode(HSB, 360, 100, 100, 100);
 
