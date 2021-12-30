@@ -158,6 +158,7 @@ function setup(){
             song.play();
             msg1 = msg;
         } else {
+             // clear msg1
             msg1 = msg;
         }
     });
