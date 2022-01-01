@@ -265,8 +265,11 @@ function draw() {
     text(roomName, 10, 50);
 
 
-    //textNeon("arbitraryPlay", width/2, height/2, color(332, 58, 91,100));
-
+    testSize(12);
+    textFont("SFMono-Regular");
+    fill(255,0,203);
+    text("Please turn on the volume", 10, 80);
+    text("Tap the screen, move or shake your device", 10, 90);
     
     textSize(24);
     fill(255, 255, 255);
