@@ -266,7 +266,7 @@ function draw() {
 
 
     testSize(12);
-    textFont("SFMono-Regular");
+    textFont('Helvetica');
     fill(255,0,203);
     text("Please turn on the volume", 10, 80);
     text("Tap the screen, move or shake your device", 10, 90);
