@@ -265,8 +265,8 @@ function draw() {
     text(roomName, 10, 50);
 
 
-    testSize(12);
-    textFont('Helvetica');
+    textSize(12);
+    textFont('Courier');
     fill(255,0,203);
     text("Please turn on the volume", 10, 80);
     text("Tap the screen, move or shake your device", 10, 90);
