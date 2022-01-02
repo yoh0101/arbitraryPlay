@@ -88,7 +88,7 @@ function setup() {
     imageMode(CENTER);
     pixelDensity(1);//High reso, slows frame rate
 */
-    home = createButton("回到首頁");
+    home = createButton("Home");
     home.size(100, 30);
     home.position(windowWidth/2-50, windowHeight-30);
     home.touchStarted(backToHome);
