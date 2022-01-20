@@ -129,6 +129,10 @@ io.on("connection", socket => {
         socket.broadcast.emit("cf1", value);
     });
 
+    socket.on("touch", (msg) => {
+        socket.broadcast.emit("touch", msg);
+    });
+
     // receive the event "mouse" and call mouseMsg function
     socket.on("mouse", mouseMsg);
     // mouseMsg function

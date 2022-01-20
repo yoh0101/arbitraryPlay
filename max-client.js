@@ -39,6 +39,10 @@ maxApi.addHandler("connect", (url) => {
     socket.on("test", msg => {
         maxApi.outlet(msg);
     });
+
+    socket.on("touch", msg => {
+        maxApi.outlet(msg);
+    });
     
 });
 
