@@ -335,7 +335,7 @@ function mousePressed() {
     s.velocity.x = random(-5, 5);
     s.velocity.y = random(-5, 5);
 
-    socket.emit("touch", {roomName: roomName, x: mouseX, y: mouseY, vx: s.velocity.x, vy: s.velocity.y});
+    socket.emit("touch", {roomName: roomName, mouse: [mouseX, mouseY, s.velocity.x, s.velocity.y]});
   }
 
 
